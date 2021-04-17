@@ -13,31 +13,31 @@ if __name__ == "__main__":
     tool = str(args.tool).lower()
 
     if tool == 'bin-info':
-        import tools.azathot.bin_info
+        import bin_info
 
     elif tool == 'temp-mail':
         os.system('cls') if os.name == 'nt' else os.system('clear')
-        print(info(red("[ Q ] Exit.")))
+        print(info(red("[ Q ] Salir")))
         time.sleep(0.7)
-        print(good("Generating Temp-Email."))
+        print(good("Generando mail temporal"))
         time.sleep(5)
         os.system("w3m https://temp-mail.org/es/")
         print(good("Finish."))
 
     elif tool == 'cc-gen':
-        import tools.azathot.cc_gen
+        import cc_gen
     
 
     elif tool == 'checker':
-        print(bad(yellow("This tool was deleted")))
+        print(bad(yellow("Herramienta cerrada")))
 
     else:
         if os.name == 'nt':
 
-            print(red("\n Carding ToolKit > Azathot \n"))
+            print(red("\n Herramienta Carding > Vitto \n"))
             os.system('python azathot.py -h')
 
         else:
             
-            print(red("\n Carding ToolKit > Azathot \n"))
+            print(red("\n Herramienta carding > Vitto \n"))
             os.system('python3 azathot.py -h')
